@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="FullStax">
+<head>
+	<title>FullStax</title>
+	<meta charset="utf-8"> <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body ng-controller="MainController">
+
+	<div class="display-inline">
+		<h2>Friends</h2>
+		<ul ng-repeat="friend in friends">
+			<li>name: {{friend.name}}</li>
+			<li>age: {{friend.age}}</li>
+			<li>when we met: {{friend.yearMet}}</li>
+		</ul>
+		<button ng-click="getFriends()">Get Friends</button>
+    <hr>
+    	<input ng-model="friend.name" placeholder="name"/>
+    	<input ng-model="friend.age" placeholder="age"/>
+    	<input ng-model="friend.yearMet" placeholder="Year Met"/>
+    	<button ng-click="addFriend()">Add Friend</button>
+    </div>
+	<div class="display-inline">
+		<h2>Family</h2>
+		<ul ng-repeat="familyMember in family">
+			<li>name: {{familyMember.name}}</li>
+			<li>age: {{familyMember.age}}</li>
+			<li>relationship: {{familyMember.relationship}}</li>
+		</ul>
+		<button ng-click="getFamily()">Get Family</button>
+	</div>
+
+	<div class="display-inline">
+		<h2>Actities</h2>
+		<ul ng-repeat="activity in activities">
+			<li>name: {{activity.name}}</li>
+			
+		</ul>
+		<button ng-click="getActivities()">Get Activities</button>
+	</div>
+
+	<div class="display-inline">
+		<h2>Info</h2>
+		<li>name: {{info[0].name}}</li>
+		<li>age: {{info[0].age}}</li>
+		<li>height: {{info[0].height}}</li>
+		<button ng-click="getPersonal()">Get Personal Information</button>
+	</div>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/myCtrl.js"></script>
+<script src="js/myService.js"></script>
+</body>
+</html>
